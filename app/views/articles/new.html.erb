@@ -4,6 +4,9 @@
     <%= f.error_notification %>
     <%= f.input :title, label: "Titre" %>
     <%= f.input :content, label: "Contenu" %>
+    <%= f.text_area :content, class: "tinymce", rows: 40, cols: 120 %>
+    <%= tinymce %>
+
     <%= f.input :images,
                       as: :file,
                       label: "Choisir des images",
