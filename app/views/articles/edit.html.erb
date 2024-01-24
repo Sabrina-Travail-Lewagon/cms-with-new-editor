@@ -1,22 +1,18 @@
-	<div class="container">
-	  <h1>Modification d'un article</h1>
-	  <%= simple_form_for(@article) do |f| %>
-	    <%= f.error_notification %>
-	    <%= f.input :title, label: "Titre" %>
-	    <%= f.input :content, label: "Contenu" %>
-	    <% if @article.images.attached? %>
-	      Images actuelles : <br>
-	      <% @article.images.each do |image| %>
-	            <%= image_tag image %>
-	          <% end %>
-	    <% end %>
-	    <%= f.input :images,
-	                      as: :file,
-	                      label: "Choisir des images",
-	                      input_html: {
-	                        multiple: true
-	                      }
-	          %>
-	    <%= f.button :submit, "Modifier", class: "btn btn-primary" %>
-	  <% end %>
+<div class="container">
+  <h1>Création d'un article</h1>
+  <%= simple_form_for(@article) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :title, label: "Titre" %>
+    <%= f.text_area :content, class: "tinymce", rows: 40, cols: 120 %>
+    <%= tinymce %>
+
+    <%= f.input :images,
+                      as: :file,
+                      label: "Choisir des images",
+                      input_html: {
+                        multiple: true
+                      }
+          %>
+    <%= f.button :submit, "Créer", class: "btn btn-primary" %>
+  <% end %>
 </div>

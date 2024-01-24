@@ -1,8 +1,13 @@
 height: 500
 menubar: false
 toolbar:
-  - undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help
+  - undo redo | formatselect | bold italic backcolor | link | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | table | code | image | uploadimage | help
 plugins:
-  - advlist autolink lists link image charmap print preview anchor
+  - advlist autolink lists link charmap preview anchor
   - searchreplace visualblocks code fullscreen
-  - insertdatetime media table paste code help wordcount
+  - insertdatetime media table code help wordcount
+  - table
+  - image
+  - code
+  - link
+  - media
