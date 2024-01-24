@@ -14,7 +14,7 @@
 	        <% end %>
 	      </div>
 	      <div class="article-content">
-	        Contenu : <%= raw @article.content %>
+	        Contenu : <%= @article.content.html_safe %>
 	      </div>
 	    </div>
 	  </div>

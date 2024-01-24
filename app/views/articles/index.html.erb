@@ -17,7 +17,7 @@
 	        </td>
 	        <td>
 	        <%# Lien vers la vue edit pour modifier un article %>
-	          <%= link_to "Modifier", edit_article_path(article) %>
+	          <%= link_to "Modifier", edit_article_path(article), data: { turbo: false } %>
 	        </td>
 	        <td>
 	        <%# Lien pour supprimer un article %>
