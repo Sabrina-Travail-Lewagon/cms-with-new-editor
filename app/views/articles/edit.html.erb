@@ -5,15 +5,6 @@
     <%= f.input :title, label: "Titre" %>
     <%= f.text_area :content, class: "tinymce", rows: 40, cols: 120 %>
     <%= tinymce %>
-    Affichage de l'image :
-<% if @article.images.attached? %>
-  <% @article.images.each do |image| %>
-    <%= image_tag url_for(image) %>
-    <%# Afficher l'URL pour le débogage %>
-    URL de l'image : <%= url_for(image) %><br/>
-  <% end %>
-<% end %>
-
     <%= f.input :images,
                       as: :file,
                       label: "Choisir des images",

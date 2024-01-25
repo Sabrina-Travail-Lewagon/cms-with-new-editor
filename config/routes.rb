@@ -13,16 +13,6 @@ Rails.application.routes.draw do
   resolve("ActiveStorage::Variant") { |variant| route_for(:rails_blob, variant.blob) }
   resolve("ActiveStorage::Preview") { |preview| route_for(:rails_blob, preview.blob) }
 
-  # Ceci inclut les routes d'ActiveStorage pour les fichiers et les représentations
-  resources :articles
-  namespace :active_storage do
-    resources :attachments, only: [:create, :destroy]
-    resources :blobs, only: [:show] do
-      resources :representations, only: [:show]
-      resources :disk, only: [:show], controller: :disk
-    end
-  end
-
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

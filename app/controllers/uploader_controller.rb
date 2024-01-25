@@ -6,6 +6,8 @@ class UploaderController < ApplicationController
 	      filename:     params[:file].original_filename,
 	      content_type: params[:file].content_type
 	    )
-	    render json: {location: url_for(blob)}, content_type: "text/html"
+	    # render json: {location: url_for(blob)}, content_type: "text/html"
+      # Renvoyer l'URL de l'image dans le format attendu par TinyMCE.
+    render json: { location: url_for(blob) }, content_type: "application/json"
   end
 end
