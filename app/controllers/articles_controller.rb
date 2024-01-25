@@ -33,6 +33,14 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    # On récupère l'id avec before_action
+    # On supprime l'enregistrement avec l'id dans la BdD
+    @article.destroy
+    # On redirige vers la page index
+    redirect_to articles_path, status: :see_other, :notice => "Article supprimé!"
+  end
+
   private
 	def find_article
 	  @article = Article.find(params[:id])
