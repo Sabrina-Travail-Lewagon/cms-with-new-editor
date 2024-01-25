@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :destroy, :update]
   def index
-    @articles = Article.all
+    @articles = Article.all.order(id: "desc")
   end
 
   def show
@@ -31,6 +31,14 @@ class ArticlesController < ApplicationController
     else
       render :edit, alert: "Impossible de mettre à jour l\'article."
     end
+  end
+
+  def destroy
+    # On récupère l'id avec before_action
+    # On supprime l'enregistrement avec l'id dans la BdD
+    @article.destroy
+    # On redirige vers la page index
+    redirect_to articles_path, status: :see_other, :notice => "Article supprimé!"
   end
 
   private

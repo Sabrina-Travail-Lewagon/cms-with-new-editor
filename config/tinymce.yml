@@ -1,13 +1,21 @@
-height: 500
-menubar: false
+menubar: "insert view format table tools"
 toolbar:
-  - undo redo | formatselect | bold italic backcolor | link | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | table | code | image | uploadimage | help
+  - bold italic | link | undo redo | forecolor backcolor | bullist numlist outdent indent | table | uploadimage | code
 plugins:
-  - advlist autolink lists link charmap preview anchor
-  - searchreplace visualblocks code fullscreen
-  - insertdatetime media table code help wordcount
   - table
+  - fullscreen
   - image
   - code
+  - searchreplace
+  - wordcount
+  - visualblocks
+  - visualchars
   - link
+  - charmap
+  - directionality
+  - nonbreaking
   - media
+  - advlist
+  - autolink
+  - lists
+images_upload_url: '/uploader/image'

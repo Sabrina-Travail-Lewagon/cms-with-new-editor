@@ -1,7 +1,7 @@
 	<div class="container">
 	  <h1>Liste des articles</h1>
 	  <%# Lien vers la vue new pour créer un article %>
-	  <p><%= link_to "Créer", new_article_path %></p>
+	  <p><%= link_to "Créer", new_article_path, data: { turbo: false } %></p>
 	  <div class="row">
 	    <table class="table liste-articles table-striped table-bordered">
 	      <th>Nom</th>
