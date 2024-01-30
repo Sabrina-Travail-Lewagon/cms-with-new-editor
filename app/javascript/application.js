@@ -6,5 +6,4 @@ import "bootstrap"
 //= require tinymce
 tinymce.init({
   selector: '.tinymce',  // change this value according to your HTML
-  file_picker_types: 'file image media'
 });
